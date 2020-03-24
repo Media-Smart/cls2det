@@ -1,0 +1,8 @@
+addict
+numpy
+pillow
+matplotlib
+pycocotools
+scikit-learn
+torch>=1.1.0
+torchvision>=0.3.0
