@@ -82,7 +82,7 @@ b. Run
 python tools/demo.py --img_path <path to image>
 ```
 
-where image with bounding box prediction and confidence will be stored under `data/result`.
+Rendered image with bounding box prediction and confidence will be stored in `data/result`.
 
 ## Eval
 
@@ -95,5 +95,5 @@ b. Run
 ```shell
 python tools/eval.py 
 ```
-where the evaluation report will be shown.
+The evaluation report will be shown on terminal.
 
