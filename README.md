@@ -45,7 +45,7 @@ conda install pytorch torchvision -c pytorch
 c. Clone the cls2det repository.
 
 ```shell
-git clone https://github.com/YuxinZou/cls2det.git
+git clone https://github.com/Media-Smart/cls2det.git
 cd cls2det
 ```
 
