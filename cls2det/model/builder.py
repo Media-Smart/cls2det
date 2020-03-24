@@ -4,7 +4,7 @@ from .model import resnet18
 
 
 def model_builder(cfg):
-    if cfg.gpu and torch.cuda.is_available():
+    if cfg.gpu is not None and torch.cuda.is_available():
         print('=> use GPU: {}'.format(cfg.gpu))
         device = torch.device(f'cuda:{cfg.gpu}')
     else:

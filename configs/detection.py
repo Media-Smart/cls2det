@@ -16,8 +16,8 @@ work_dir = 'cls2det/'
 norm_cfg = dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 data = dict(
     fname_list=dict(
-        train=work_dir + 'data/VOC2012/ImageSets/main/dog_train.txt',
-        val=work_dir + 'data/VOC2012/ImageSets/main/dog_val.txt',
+        train=work_dir + 'data/VOC2012/ImageSets/Main/dog_train.txt',
+        val=work_dir + 'data/VOC2012/ImageSets/Main/dog_val.txt',
     ),
     img_dir=work_dir + 'data/VOC2012/JPEGImages',
     ann_dir=work_dir + 'data/VOC2012/Annotations',
@@ -62,6 +62,7 @@ save_folder = work_dir + 'data/result' if save_images else None
 
 # json files and parameter for evaluation
 eval = dict(
+    folder=(work_dir + 'data/eval/'),
     train=dict(
         gt=work_dir + 'data/eval/train_Gt.json',
         dt=work_dir + 'data/eval/train_Dt.json'

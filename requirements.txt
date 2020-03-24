@@ -1,6 +1,7 @@
 addict
+Cython
 numpy
-pillow
+pillow==6.2.2
 matplotlib
 pycocotools
 scikit-learn

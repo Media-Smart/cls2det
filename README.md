@@ -64,7 +64,7 @@ Download [Pascal VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtra
     ├── VOC2012
     │     ├── Annotations
     │     ├── ImageSets
-    │     │       └──── main
+    │     │       └──── Main
     │     └── JPEGImages
     ├── eval
     ├── result

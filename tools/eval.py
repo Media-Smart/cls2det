@@ -25,6 +25,8 @@ def main():
     cfg_fp = args.config
     cfg = Config.fromfile(cfg_fp)
     detect = Detector(cfg_fp)
+    if not os.path.exists(cfg.eval.folder):
+        os.makedirs(cfg.eval.folder)
 
     if not os.path.exists(cfg.eval[args.dataset].gt):
         detect.generate_json(cfg.eval[args.dataset].gt, 'Gt', args.dataset)
