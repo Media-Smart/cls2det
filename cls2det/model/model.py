@@ -196,7 +196,7 @@ class ResNet(nn.Module):
 
         return nn.Sequential(*layers)
 
-    def _forward_impl(self, x, type):
+    def _forward_impl(self, x, mode):
         # See note [TorchScript super()]
         x = self.conv1(x)
         x = self.bn1(x)
@@ -208,7 +208,7 @@ class ResNet(nn.Module):
         x = self.layer3(x)
         x = self.layer4(x)
 
-        if type == 'fm':
+        if mode == 'fm':
             b, c, w, h = x.shape
             x = x.permute(0, 2, 3, 1)
 
@@ -223,8 +223,8 @@ class ResNet(nn.Module):
 
             return output, x_pre
 
-    def forward(self, x, type='fm'):
-        return self._forward_impl(x, type)
+    def forward(self, x, mode='fm'):
+        return self._forward_impl(x, mode)
 
 
 def _resnet(arch, block, layers, pretrained, progress, **kwargs):

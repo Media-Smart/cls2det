@@ -1,4 +1,5 @@
 from .detector import Detector
-from .util import (box_rescale, cell2box, data2coco, draw, get_std,
+from .classifier import Classifier
+from .utils import (box_rescale, cell2box, data2coco, draw,
                    get_img_annotations, get_label, get_scale, nms,
-                   remover_outlier, resize)
+                   remove_outlier, resize)

@@ -15,9 +15,9 @@ Evaluation on class "dog" on PASCAL VOC 2012 dataset:
 | val   | 0.394     | 0.533     | 0.631     |
 
 - Achieve good visual results by only using a classifier without any training process
-- Although the metrics are not good as SOTA, the location of the bounding box prediction is highly correlated with the ground truth from the perspective of the intuitive feeling. In some cases, e.g. when the size of the bounding box prediction does not need to be very accurate, this tool is very meaningful.
+- Although the metrics are not good as SOTA, the location of the bounding box prediction is highly correlated with the ground truth from the perspective of the intuitive feeling. In some cases, e.g. when the size of the bounding box prediction does not need to be very accurate, this tool is of great significance.
 
-![example](vis/example.jpg)
+![example](preview/example.jpg)
 
 ### Requirements
 
@@ -79,7 +79,7 @@ Modify some configuration accordingly in the config file like `configs/detection
 b. Run
 
 ```shell
-python tools/demo.py --img_path <path to image>
+python tools/demo.py --config configs/cls2det_resnet18.py --img_path <path to image>
 ```
 
 Rendered image with bounding box prediction and confidence will be stored in `data/result`.
@@ -93,7 +93,7 @@ Modify some configuration accordingly in the config file like `configs/detection
 b. Run
 
 ```shell
-python tools/eval.py 
+python tools/eval.py --config configs/cls2det_resnet18.py
 ```
 The evaluation report will be shown on terminal.
 
