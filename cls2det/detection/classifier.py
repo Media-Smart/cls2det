@@ -3,7 +3,7 @@ import torch.nn.functional as F
 from torchvision import transforms
 
 from .utils import get_label
-from cls2det.model import model_builder
+from ..model import model_builder
 
 
 class Classifier:
